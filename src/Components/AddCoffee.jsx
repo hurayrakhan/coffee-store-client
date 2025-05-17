@@ -28,10 +28,10 @@ const AddCoffee = () => {
 
 
     return (
-        <div className="bg-[url('./11.png')] bg-cover bg-no-repeat">
+        <div className="bg-[url('./11.png')] bg-cover bg-no-repeat mb-10">
             <div className='w-8/12 mx-auto'>
                 <NavLink to={'/'} className='w-[170px] flex items-center gap-2 text-lg font-semibold py-2 pl-1 pr-4 my-2 hover:bg-gray-200 hover:rounded '><FaArrowLeftLong /> Back to home</NavLink>
-                <div className="bg-[url('/13.jpg')] bg-cover px-25 py-10 rounded-2xl">
+                <div className="bg-[#F4F3F0] bg-cover px-25 py-10 rounded-2xl">
                     <div className='max-w-3xl mx-auto'>
                         <h3 className='text-2xl font-bold py-3 text-center'>Add New Coffee</h3>
                         <p className='text-center '>It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
@@ -41,7 +41,7 @@ const AddCoffee = () => {
                             <fieldset className="fieldset bg-base-200 border-base-300 rounded-box  border p-4">
 
                                 <label className="label">Name</label>
-                                <input type="text" name='name' className="input w-full" placeholder="Enter coffee name" />
+                                <input type="text" name='name' required className="input w-full" placeholder="Enter coffee name" />
                             </fieldset>
                             <fieldset className="fieldset bg-base-200 border-base-300 rounded-box  border p-4">
 
@@ -61,7 +61,7 @@ const AddCoffee = () => {
                             <fieldset className="fieldset bg-base-200 border-base-300 rounded-box  border p-4">
 
                                 <label className="label">Price</label>
-                                <input type="text" name='price' className="input w-full" placeholder="Enter coffee price" />
+                                <input type="text" name='price' required className="input w-full" placeholder="Enter coffee price" />
                             </fieldset>
                             <fieldset className="fieldset bg-base-200 border-base-300 rounded-box  border p-4">
 
@@ -73,7 +73,7 @@ const AddCoffee = () => {
                         <fieldset className="fieldset bg-base-200 border-base-300 rounded-box  border p-4 mt-4">
 
                             <label className="label">Photo URL</label>
-                            <input type="url" name='photo' className="input w-full" placeholder="Enter photo URL" />
+                            <input type="url" name='photo' required className="input w-full" placeholder="Enter photo URL" />
                         </fieldset>
                         <input className='btn btn-neutral mt-7 w-full' type="submit" value="Add Coffee" />
                     </form>

@@ -49,6 +49,9 @@ const Footer = () => {
                     </form>
                 </div>
             </div>
+            <div className='p-4 bg-[url("/24.jpg")] bg-cover text-center'> 
+                <p className='text-white text-lg'>Copyright Espresso Emporium ! All Rights Reserved</p>
+            </div>
         </div>
     );
 };
