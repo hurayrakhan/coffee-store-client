@@ -6,6 +6,16 @@ import { FaCoffee } from "react-icons/fa";
 
 const Home = () => {
     const coffeeData = useLoaderData();
+
+    const handleDelete = (id) => {
+        fetch(`http://localhost:3000/coffees/${id}`, {
+            method: 'DELETE'
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log('data after delete', data)
+        })
+    }
     return (
         <div className='bg-[url("/1.png")] bg-cover bg-no-repeat'>
             <div>
@@ -18,7 +28,7 @@ const Home = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6 w-9/12 mx-auto my-10'>
 
                 {
-                    coffeeData.map(coffee => <Coffees key={coffee.id} coffee={coffee}></Coffees>)
+                    coffeeData.map(coffee => <Coffees key={coffee._id} handleDelete={handleDelete} coffee={coffee}></Coffees>)
                 }
             </div>
         </div>
