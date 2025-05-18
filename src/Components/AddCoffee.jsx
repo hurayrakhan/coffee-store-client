@@ -75,7 +75,7 @@ const AddCoffee = () => {
                             <label className="label">Photo URL</label>
                             <input type="url" name='photo' required className="input w-full" placeholder="Enter photo URL" />
                         </fieldset>
-                        <input className='btn btn-neutral mt-7 w-full' type="submit" value="Add Coffee" />
+                        <input className='btn bg-[#D2B48C] border-2 border-[#331A15] mt-7 w-full' type="submit" value="Add Coffee" />
                     </form>
                 </div>
             </div>

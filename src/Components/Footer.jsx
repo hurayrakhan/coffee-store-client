@@ -44,7 +44,7 @@ const Footer = () => {
                     
                             <textarea  name='message' className="input w-full bg-white h-32" placeholder="Type your message here..."></textarea>
 
-                        <input type="submit" className='border-2 border-[#331A15] px-4 py-2 rounded-4xl' value="Send Message" />
+                        <input type="submit" className='border-2 border-[#331A15] font-semibold text-[#331A15] px-4 py-2 rounded-4xl' value="Send Message" />
                         
                     </form>
                 </div>
