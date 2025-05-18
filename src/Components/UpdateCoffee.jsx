@@ -1,32 +1,18 @@
 import React from 'react';
-import { FaArrowLeftLong } from "react-icons/fa6";
-import { NavLink } from 'react-router';
 
-const AddCoffee = () => {
+const UpdateCoffee = ({coffee}) => {
 
-    const handleAddCoffee = (e) => {
+    const {name, chef, supplier, taste, price, photo, details} = coffee
+
+    const handleUpdateCoffee = (e) => {
         e.preventDefault();
 
         const form = e.target;
-        const formData = new FormData(form);
-        const coffeeData = Object.fromEntries(formData.entries());
-        console.log(coffeeData)
-
-        fetch('http://localhost:3000/coffees', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(coffeeData)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log('after adding to db', data)
-            });
+        const formdata = new FormData(form);
+        const coffeeData = Object.fromEntries(formdata.entries());
 
     }
- 
-
+    
     return (
         <div className="bg-[url('./11.png')] bg-cover bg-no-repeat mb-10">
             <div className='w-8/12 mx-auto'>
@@ -36,7 +22,7 @@ const AddCoffee = () => {
                         <h3 className='text-2xl font-bold py-3 text-center'>Add New Coffee</h3>
                         <p className='text-center '>It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
                     </div>
-                    <form onSubmit={handleAddCoffee} className='my-10'>
+                    <form onSubmit={handleUpdateCoffee} className='my-10'>
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                             <fieldset className="fieldset bg-base-200 border-base-300 rounded-box  border p-4">
 
@@ -83,4 +69,4 @@ const AddCoffee = () => {
     );
 };
 
-export default AddCoffee;
+export default UpdateCoffee;
