@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Coffees = ({ coffee, handleDelete }) => {
 
@@ -15,7 +16,7 @@ const Coffees = ({ coffee, handleDelete }) => {
                 <h2 className="card-title">Coffee name : {name}</h2>
                 <p>Price : {price}</p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Watch</button>
+                    <Link to={`/updateCoffee/${_id}`}><button className="btn btn-primary">Edit</button></Link>
                     <button onClick={() => {
                         handleDelete(_id)
                     }} className='btn btn-neutral '>Delete</button>

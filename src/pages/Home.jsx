@@ -15,7 +15,10 @@ const Home = () => {
         .then(data => {
             console.log('data after delete', data)
         })
-    }
+    };
+
+
+    
     return (
         <div className='bg-[url("/1.png")] bg-cover bg-no-repeat'>
             <div>
