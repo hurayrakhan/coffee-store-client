@@ -36,7 +36,7 @@ const UpdateCoffee = () => {
                         <h3 className='text-2xl font-bold py-3 text-center'>Update Coffee</h3>
                         <p className='text-center '>It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
                     </div>
-                    <form onSubmit={handleUpdateCoffee} className='my-10'>
+                    <form onSubmit={handleUpdateCoffee} className='my-10 '>
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                             <fieldset className="fieldset bg-base-200 border-base-300 rounded-box  border p-4">
 
